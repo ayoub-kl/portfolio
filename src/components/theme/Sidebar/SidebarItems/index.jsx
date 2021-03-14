@@ -7,7 +7,7 @@ import Skills from '../../Skills'
 
 
 export default () => {
-    const [isShown,setisShown] = useState(true)
+    const [isShown,setisShown] = useState(false)
 
     return(
         <>

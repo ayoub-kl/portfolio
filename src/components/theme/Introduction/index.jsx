@@ -18,21 +18,21 @@ import useMediaQuery from 'hooks/useMediaQuery'
 
 export default () => {
 const [pageName , setpageName] = useState("")
-let isCheck = useMediaQuery(device.medium)
-
+let isMediumCheck = useMediaQuery(device.medium)
+let isLargeCheck = useMediaQuery(device.large)
 
   return (
     <Wrapper>
-      <BigImgWrap className="IntroCls" pagename={pageName} ischeck={isCheck}>
+      <BigImgWrap className="IntroCls" pagename={pageName} ismedcheck={isMediumCheck} islargecheck={isLargeCheck}>
     
-        <Carousel indicators={true} animation="fade" interval="5000" navButtonsAlwaysInvisible={true}>
+        <Carousel indicators={true} animation="slide" interval="500000" navButtonsAlwaysInvisible={true}>
           {config.map((item, index) => {
             return <Cards {...item} key={index} setpagename={setpageName}  />
           })}
         </Carousel>
       </BigImgWrap>
 
-      <AboutMeWrapper className="AboutMeCls" ischeck={isCheck}>
+      <AboutMeWrapper className="AboutMeCls" ismedcheck={isMediumCheck}>
         <AboutMe />
       </AboutMeWrapper>
 
@@ -41,7 +41,7 @@ let isCheck = useMediaQuery(device.medium)
       duration={2}
           animateOnce={true}
     >
-      <TimelineWrapper className="TimelineCls" ischeck={isCheck}>
+      <TimelineWrapper className="TimelineCls" ismedcheck={isMediumCheck}>
         <Timeline />
       </TimelineWrapper>
       </ScrollAnimation>

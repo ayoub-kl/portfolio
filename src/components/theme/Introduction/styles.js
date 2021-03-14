@@ -17,28 +17,28 @@ export const BigImgWrap = styled.div`
 position : relative;
 align-self: flex-start;
 margin-bottom : 80px;
-left :${(props) => !props.ischeck && '300px' };
+left :${(props) => !props.ismedcheck && '300px' };
 /* max-height:870px; */
-/* width :${(props) => props.ischeck && '100vw' }; */
+/* width :${(props) => props.ismedcheck && '100vw' }; */
 h1{
     position : absolute;
     z-index:400;
     color : white;
-    top : ${(props) => props.pagename==="laptop" ? null: '239px'};
+    top : ${(props) => props.pagename==="laptop" ? '180px': '132px'};
     right :${(props) => props.pagename==="laptop" ? null: '133px'};
-    bottom : ${(props) => props.pagename==="laptop" && '140px'};
+    /* bottom : ${(props) => props.pagename==="laptop" && '140px'}; */
     left : ${(props) => props.pagename==="laptop"  && '260px'};
     font-size : ${(props) => props.pagename==="laptop" ? '250%': '370%'};
     line-height : 1.3;
     font-weight:400;
-    width : ${(props) => props.pagename==="laptop" && '14%'};
+    width : ${(props) => props.pagename==="laptop" && !props.ismedcheck ? '23%' : props.pagename==="laptop" && !props.islargecheck ? '38% ': null };
 }
 
 h2{
     position : absolute;
     z-index:400;
     color : white;
-    top : 135px;
+    top : 34px;
     right :392px;
     font-size :60px;
     line-height : 1.3;
@@ -49,9 +49,12 @@ h2{
 a{
     position : absolute;  
     z-index:400;
-    bottom : ${(props) => props.pagename==="laptop" && '129px'};
-    left : ${(props) => props.pagename==="laptop"  && '260px'};
-    color : white;
+    /* bottom : ${(props) => props.pagename==="laptop" && '129px'}; */
+    /* top : ${(props) => props.pagename==="laptop" && '373px'};
+    left : ${(props) => props.pagename==="laptop"  && '260px'}; */
+    bottom : ${(props) => props.pagename==="laptop" && '-30px'};
+    left : ${(props) => props.pagename==="laptop"  && '0'};
+    color : #0c93a1;
     cursor : pointer;
     border :3px solid white;
     font-size : 14px;
@@ -65,7 +68,7 @@ export const AboutMeWrapper = styled.div`
 
 position: relative;
 width : 100%;
-left :${(props) => !props.ischeck && '300px' };
+left :${(props) => !props.ismedcheck && '300px' };
 margin-bottom : 120px;
 
 
@@ -93,7 +96,7 @@ export const TimelineWrapper = styled.div`
 
 position: relative;
 width : 100%;
-left :${(props) => !props.ischeck && '300px' };
+left :${(props) => !props.ismedcheck && '300px' };
 
 
 

@@ -13,7 +13,7 @@ let isCheck = useMediaQuery(device.medium)
     return(
         <Wrapper>
 
-        { <Suspense fallback={
+        {!isCheck && <Suspense fallback={
             <FlapperSpinner size={70} color="#29292e" loading={true} />
         }>
         <Sidebar/>  

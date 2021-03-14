@@ -11,10 +11,10 @@ import {Notepad} from '@styled-icons/boxicons-solid/Notepad'
 const useStyles = makeStyles({
   root: {
     maxWidth : '100%',
-    maxHeight : '950px',
+    maxHeight : '100vh',
   },
   media: {
-    height: '100%',
+    height: '100vh',
     width: '100%',
 
   },
@@ -31,13 +31,16 @@ useEffect(() => {
 }, [name,setpagename])
 
   return (
-    <>
+    <div>
     {name==="laptop2" && <h2>Hi !</h2>}
-    <h1>{description}</h1>
+    <h1>{description} 
     {name==="laptop" && 
   
     <a href="https://kb.4d.com/assetid=78277" target="_blank" rel="noopener noreferrer">View Technotes <Notepad size={20}/></a>
     }
+    
+    </h1>
+
     <Card className={classes.root}> 
      
         <CardMedia
@@ -51,6 +54,6 @@ useEffect(() => {
     
     
     </Card>
-    </>
+    </div>
   );
 }
