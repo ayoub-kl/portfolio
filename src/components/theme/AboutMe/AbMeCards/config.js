@@ -7,21 +7,21 @@ export default [
 
 {
     label : "Web development",
-    Descriptiopn : "I have experience building websites and chrome extentions using JavaScript,React,HTML,CSS",
+    Descriptiopn : "Building web applications and websites using JavaScript,React,HTML,CSS",
     color : '#2c98f0',
     icon: <Web size={70}/>,
 },
 
 {
     label : "4D development",
-    Descriptiopn : "I have experience building websites and chrome extentions using JavaScript,React,HTML,CSS",
+    Descriptiopn : "Building desktop applications and web app backends and API's using 4D.",
     color : '#fb8651',
     icon: <Desktop size={70}/>,
 },
 
 {
     label : "QA , support & testing",
-    Descriptiopn : "I have experience building websites and chrome extentions using JavaScript,React,HTML,CSS",
+    Descriptiopn : "Making sure that products meet quality standards , while offering consulting services to my clients and keeping communication flow steady. ",
     color : '#2fa499',
     icon: <Speedtest size={70}/>,
 },

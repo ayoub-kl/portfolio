@@ -11,7 +11,7 @@ export default () => {
     <Wrapper>
       {config.map((value, index) => {
         return (
-            <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutRight" duration={2} key={index}>
+            <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutRight" duration={1} key={index}>
           <CardWrapper key={index} {...value}>
           <span>
           {value.icon}

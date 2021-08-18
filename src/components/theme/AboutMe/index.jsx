@@ -11,7 +11,7 @@ export default () => {
       <ScrollAnimation
         animateIn="bounceInLeft"
         animateOut="fadeOut"
-        duration={2}
+        duration={1}
       >
         <h4>About me</h4>
         <h2>Who am i </h2>
@@ -20,7 +20,7 @@ export default () => {
           school of engineering sciences).Then proceeded to join the IT world by
           joining an IT company located in Rabat - morocco . <br />
           Since day one till this day i managaed to occupy many posts in the
-          company , from QA , testing , support to development in different
+          company , from QA ,manual and automated testing , support to development in different
           technologies. I still love learning and using new technologies <br />{' '}
           and looking forward to what new challenges and opportunities the
           future may bring.{' '}

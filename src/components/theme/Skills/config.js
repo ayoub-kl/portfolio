@@ -6,6 +6,7 @@ import Nextimg from 'assets/nextjs.svg'
 import Pythonimg from 'assets/python.png'
 import Cssimg from 'assets/css.png'
 import Js from 'assets/javascript.png'
+import Ang from 'assets/angular-icon-logo.png'
 export default [
 
 {
@@ -14,7 +15,7 @@ export default [
     icon : Reactimg 
 },
 {
-    label : "React native",
+    label : "React nat",
     level : 7.5 ,
     icon : Reactnatimg
 },
@@ -24,7 +25,11 @@ export default [
     level : 7 ,
     icon : Dimg
 },
-
+{
+    label : "Angular",
+    level : 7,
+    icon : Ang 
+},
 {
     label : "NextJS",
     level : 5 ,

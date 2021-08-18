@@ -29,8 +29,8 @@ const dragHandlers = {onStart : () =>handleOnStart() , onStop : ()=>handleOnStop
 
   return (
     <Wrapper>
-      <h4>Highlights</h4>
-      <h2>Timeline</h2>
+      <h4>Timeline</h4>
+      <h2>Highlights</h2>
 
       {config.map((value, index) => {
         return (

@@ -9,10 +9,21 @@ import Logo from '../../../logo.svg'
 import {HeartFill} from '@styled-icons/bootstrap/HeartFill'
 import {Linkedin} from '@styled-icons/bootstrap/Linkedin'
 /* eslint-disable import/no-anonymous-default-export */
+
+import device from 'device'
+import useMediaQuery from 'hooks/useMediaQuery'
+
 export default () => {
+
+  
+let isMediumCheck = useMediaQuery(device.medium)
+
+
+
   return (
-    <SideWrapper>
-      <ScrollAnimation animateIn="zoomIn"  duration={3} animateOnce={true}>
+    <SideWrapper ismediumcheck={isMediumCheck}>
+
+    {!isMediumCheck &&  <ScrollAnimation animateIn="zoomIn"  duration={3} animateOnce={true}>
       <ImgWrapper>
         <Img src={Mypic} alt="my pict" />
 
@@ -25,7 +36,7 @@ export default () => {
             <Email size="15px" />
           </i>
           
-          <a  href="mailto:ayoub.khali@4d.com">ayoub.khali@4d.com</a>
+          <a  href="mailto:ayoub-kl@outlook.com">ayoub-kl@outlook.com</a>
           
         </ContactSpan>
         <ContactSpan>
@@ -40,14 +51,16 @@ export default () => {
         
       </ImgWrapper>
       </ScrollAnimation>
+  }
+
       <ScrollAnimation style={{zIndex:'-1'}} animateIn="fadeInLeft"  duration={3} animateOnce={true}>
-<ItemsWrapper>
+<ItemsWrapper ismediumcheck={isMediumCheck}>
 <SidebarItems/>
 
 </ItemsWrapper>
 </ScrollAnimation>
 
-<FooterWrapper>
+{ !isMediumCheck && <FooterWrapper>
 
 <span>Made with <HeartFill size={10}/> & </span>
 <LogoWrapper>
@@ -55,7 +68,7 @@ export default () => {
 </LogoWrapper>
 </FooterWrapper>
 
-
+}
 
     </SideWrapper>
   )

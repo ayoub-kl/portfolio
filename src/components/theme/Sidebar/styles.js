@@ -4,14 +4,15 @@ import { keyframes } from "styled-components"
 
 
 export const SideWrapper = styled.div`
-position : fixed;
+position : ${(props) => props.ismediumcheck ? 'absolute' :'fixed'} ;
 top : 0;
 left : 0;
 display : flex;
 flex-direction : column;
-width : 300px;
-height : 100%;
-background : #f2f3f7;
+width : ${(props) => props.ismediumcheck ? '100vw' :'300px'};
+height : ${(props) => props.ismediumcheck ? '4%' :'100%'};
+
+background : ${(props) => !props.ismediumcheck ? '#f2f3f7' :  'transparent'} ;
 z-index :100;
 
 
@@ -81,8 +82,20 @@ export const ItemsWrapper = styled.div`
 display : flex;
 justify-content:center;
 position : relative;
-top : 140px;
-left : -1.2em;
+top : ${(props) => !props.ismediumcheck && '140px'} ;
+left : ${(props) => !props.ismediumcheck && '-1.2em'} ;
+
+nav{
+line-height:${(props) => props.ismediumcheck && '0'} ;
+height:${(props) => props.ismediumcheck && '50px'} ;
+    ul{
+        display:${(props) => props.ismediumcheck && 'flex'} ;
+        flex-direction:${(props) => props.ismediumcheck && 'row'} ;
+        width:${(props) => props.ismediumcheck && '100vw'} ;
+        justify-content:${(props) => props.ismediumcheck && 'space-evenly'} ;
+        align-items :${(props) => props.ismediumcheck && 'flex-start'} ;
+    }
+}
 
 `
 

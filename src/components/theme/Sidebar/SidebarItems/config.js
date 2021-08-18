@@ -13,6 +13,10 @@ export default [
       path: "TimelineCls",
     },
     {
+      name: "Portfolio",
+      path: "PortfolioCls",
+    },
+    {
       name: "Skills",
       path: "SkillsCls",
     },

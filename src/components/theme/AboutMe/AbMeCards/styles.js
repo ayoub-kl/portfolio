@@ -39,6 +39,7 @@ box-sizing:border-box;
 margin-right:20px;
 margin-left:20px;
 
+min-height: 100%;
 :first-child{
     margin-left:40px;  
 }

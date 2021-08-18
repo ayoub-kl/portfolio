@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import {Notepad} from '@styled-icons/boxicons-solid/Notepad'
-
+import useBkImage from 'hooks/useBkImage'
 
 const useStyles = makeStyles({
   root: {
@@ -23,11 +23,12 @@ const useStyles = makeStyles({
 });
 
 export default ({name,path,description,setpagename}) => {
+  useBkImage(name);
   const classes = useStyles();
 
 useEffect(() => {
   setpagename(name)
-
+ 
 }, [name,setpagename])
 
   return (

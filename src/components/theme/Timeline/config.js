@@ -3,7 +3,7 @@ export default [
 {
     label : "Frontend WEB developer at 4D software",
     period : "2020-present",
-    description : "Development and tests of frontend web apps using ReactJS.",
+    description : "Development and tests of frontend web apps using ReactJS and Angular.",
     color : 'rgb(0 108 174)',
 
 },
