@@ -3,7 +3,7 @@
 	"name": "myportfolio-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://ayo-kl.github.io/me",
+	"homepage": "https://ayoub-kl.github.io/me",
 	"dependencies": {
 		"gh-pages": "^2.0.1",
 		"react": "^16.8.3",
