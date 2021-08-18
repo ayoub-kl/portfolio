@@ -32,17 +32,24 @@ export const Wrapper = styled.div`
   position: fixed;
   display : flex;
   flex-direction : ${(props) => props.ismediumcheck ? 'column' :'row'} ;
+
+
   background: #f5f5f5;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
   border-radius: 2rem 2rem 2rem 2rem;
 padding : 2px;
 z-index : 1000;
 animation: ${slideIn} 0.5s ease-in-out;
+
+
 bottom : ${(props) => !props.ismediumcheck && '-19.7rem'} ;
 right : ${(props) => !props.ismediumcheck && '-95rem'} ;
 width: ${(props) => !props.ismediumcheck && '500%'} ;
 left : ${(props) => props.ismediumcheck && '0'} ;
 top : ${(props) => props.ismediumcheck && '-10px'} ;
+
+
+
 
 
 `
