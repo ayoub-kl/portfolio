@@ -25,7 +25,7 @@ width :100%;
 
 h1{
     position : absolute;
-    z-index:400;
+    z-index:40;
     color : white;
     top : ${(props) => props.pagename==="laptop" ? '180px': '132px'};
     right :${(props) => props.pagename==="laptop" ? null: '69px'};
