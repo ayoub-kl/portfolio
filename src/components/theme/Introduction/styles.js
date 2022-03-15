@@ -70,7 +70,8 @@ a{
 export const AboutMeWrapper = styled.div`
 
 position: relative;
-width : 100%;
+/* width : 100%; */
+width :${(props) => props.islargecheck ? '100%' : '88%' };
 left :${(props) => !props.ismedcheck && '300px' };
 margin-bottom : 120px;
 

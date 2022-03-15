@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Carousel from 'react-material-ui-carousel'
 import {
   Wrapper,
@@ -19,13 +19,22 @@ import '../../../../node_modules/animate.css/animate.compat.css'
 import ScrollAnimation from 'react-animate-on-scroll'
 import device from 'device'
 import useMediaQuery from 'hooks/useMediaQuery'
+import {useSkill} from 'providers/SkillSTProvider'
+import Skills from '../Skills'
 
 export default () => {
 const [pageName , setpageName] = useState("")
 let isMediumCheck = useMediaQuery(device.medium)
 let isLargeCheck = useMediaQuery(device.large)
+const {isBarShown} = useSkill()
 
+useEffect(() => {
+  
+  console.log(isBarShown)
+
+}, [isBarShown])
   return (
+
     <Wrapper>
       <BigImgWrap className="IntroCls" pagename={pageName} ismedcheck={isMediumCheck} islargecheck={isLargeCheck}>
     
@@ -36,7 +45,7 @@ let isLargeCheck = useMediaQuery(device.large)
         </Carousel>
       </BigImgWrap>
 
-      <AboutMeWrapper className="AboutMeCls" ismedcheck={isMediumCheck}>
+      <AboutMeWrapper className="AboutMeCls" ismedcheck={isMediumCheck} islargecheck={isLargeCheck}>
         <AboutMe />
       </AboutMeWrapper>
 
@@ -72,6 +81,9 @@ let isLargeCheck = useMediaQuery(device.large)
       </ScrollAnimation>
       }
       
+      {isBarShown && <Skills/>}
     </Wrapper>
+ 
+
   )
 }

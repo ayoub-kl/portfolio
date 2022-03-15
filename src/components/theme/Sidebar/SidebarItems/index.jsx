@@ -9,7 +9,7 @@ import useMediaQuery from 'hooks/useMediaQuery'
 import useBkImage from 'hooks/useBkImage'
 
 export default () => {
-    const [isShown,setisShown] = useState(false)
+    // const [isShown,setisShown] = useState(false)
     let isMediumCheck = useMediaQuery(device.medium)
     let imageLabel = useBkImage()
     console.log(imageLabel)
@@ -19,15 +19,16 @@ export default () => {
 <ul>
 {config.map((item,index)=>{
     return (
-    <SidebarItem key={index} item={item} setisshown={setisShown} isshown={isShown}/>
+    <SidebarItem key={index} item={item} />
     )
-    
+    // setisshown={setisShown} isshown={isShown}
     })
 }
 </ul>
 </Nav>
 
-{isShown && <Skills/>}
+
+
 
 </>
     )}

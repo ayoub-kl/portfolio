@@ -133,7 +133,7 @@ export const LogoWrapper = styled.div`
 display : flex;
 width : 70px;
 height : 70px;
-animation: ${AppLogoSpin} infinite 5s linear;
+animation: ${AppLogoSpin} infinite 5s normal;
 
 `
 

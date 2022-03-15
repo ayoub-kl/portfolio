@@ -10,3 +10,9 @@ flex-wrap : wrap;
 
 
 `
+
+export const Center = styled.span`
+align-self: center;
+right: -44vw;
+
+`

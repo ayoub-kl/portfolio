@@ -10,6 +10,7 @@ import rest1 from 'assets/restore_1.PNG'
 import rest2 from 'assets/restore_2.PNG'
 import rest3 from 'assets/restore_3.PNG'
 import eig2 from 'assets/eig2.png'
+import eig from 'assets/eig.png'
 export default  [
     {
         name : "Summit 2018" ,
@@ -65,6 +66,11 @@ export default  [
         name : "EIG platform" , 
         description : "EIG health platform ",
         path : eig2,
+    },
+    {
+        name : "ApiApps research project" , 
+        description : "EIG health platform ",
+        path : eig,
     },
     
 ]

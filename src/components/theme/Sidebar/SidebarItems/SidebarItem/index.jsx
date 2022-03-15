@@ -8,11 +8,13 @@ import {Portfolio} from '@styled-icons/zondicons/Portfolio'
 import {MyLink,Alink} from './styles.js'
 import device from 'device'
 import useMediaQuery from 'hooks/useMediaQuery'
+import {useDispatchSkill , useSkill} from 'providers/SkillSTProvider'
 
-export default ({ item,setisshown,isshown }) => {
+export default ({ item }) => {
 
   let isMediumCheck = useMediaQuery(device.medium)
-
+  const {isBarShown}= useSkill()
+  const {dispatchSkill} = useDispatchSkill()
   let icon = ''
   switch (item.name) {
     case 'Introduction':
@@ -34,10 +36,10 @@ export default ({ item,setisshown,isshown }) => {
       break
   }
 
-  const HandleClick = () => {
+  // const HandleClick = () => {
   
-    setisshown(!isshown)
-  }
+  //   setisshown(!isshown)
+  // }
 
   return (
     <li>
@@ -46,7 +48,7 @@ export default ({ item,setisshown,isshown }) => {
       </i>
       }
       {item.name==="Skills" ?
-      <Alink  onClick={()=>HandleClick()}>{!isMediumCheck ? item.name : " "}    {isMediumCheck && <i>
+      <Alink  onClick={()=>dispatchSkill(!isBarShown)}>{!isMediumCheck ? item.name : " "}    {isMediumCheck && <i>
         {icon}
       </i>
       }</Alink>

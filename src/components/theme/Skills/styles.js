@@ -42,14 +42,16 @@ z-index : 1000;
 animation: ${slideIn} 0.5s ease-in-out;
 
 
-bottom : ${(props) => !props.ismediumcheck && '-19.7rem'} ;
+/* bottom : ${(props) => !props.ismediumcheck && '-19.7rem'} ;
 right : ${(props) => !props.ismediumcheck && '-95rem'} ;
-width: ${(props) => !props.ismediumcheck && '500%'} ;
+
 left : ${(props) => props.ismediumcheck && '0'} ;
-top : ${(props) => props.ismediumcheck && '-10px'} ;
+top : ${(props) => props.ismediumcheck && '-10px'} ; */
 
-
-
+bottom : 2px;
+align-self: flex-end;
+/* width: ${(props) => !props.ismediumcheck && '500%'} ; */
+/* left:10px */
 
 
 `
@@ -76,10 +78,13 @@ h3{
 export const ImgWrap = styled.div `
 display : flex;
 position : absolute;
-right : 48px;
+/* right : 48px;
 top : 8px;
 width:60px;
-height:63px;
+height:63px; */
 
-
+right: 8px;
+    top: 8px;
+    /* width: 53px; */
+    height: 35px;
 `
