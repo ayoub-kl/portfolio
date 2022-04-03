@@ -50,7 +50,7 @@ font-family: 'Handwritten';
 
 a{
     display:block;
-    color: #000;
+    color: rgb(39 79 129);
     text-decoration:none;
 
 
