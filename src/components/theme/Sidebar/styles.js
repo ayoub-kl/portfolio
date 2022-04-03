@@ -46,6 +46,7 @@ display : flex;
 export const Name = styled.h1`
 font-weight : bolder;
 font-size : 30px;
+font-family: 'Handwritten';
 
 a{
     display:block;
@@ -131,8 +132,8 @@ span{
 export const LogoWrapper = styled.div`
 
 display : flex;
-width : 70px;
-height : 70px;
+width : 50px;
+height : 50px;
 animation: ${AppLogoSpin} infinite 5s normal;
 
 `

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React , {useEffect} from 'react';
+import React , {useEffect,useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -7,6 +7,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import {Notepad} from '@styled-icons/boxicons-solid/Notepad'
 import useBkImage from 'hooks/useBkImage'
+import Technotes from './Technotes';
+import {Backdrop} from './Technotes/styles'
+import {TechLink} from '../styles'
 
 const useStyles = makeStyles({
   root: {
@@ -18,18 +21,21 @@ const useStyles = makeStyles({
     width: '100%',
 
   },
-
-
 });
 
-export default ({name,path,description,setpagename}) => {
-  useBkImage(name);
+export default ({name,path,description,setpagename,pagename}) => {
+  // useBkImage(name);
   const classes = useStyles();
+const [isModalOpen,setModal] = useState(false)
 
 useEffect(() => {
   setpagename(name)
- 
 }, [name,setpagename])
+
+const handleModal= () => {
+setModal(prevState=>!prevState)
+}
+
 
   return (
     <div>
@@ -37,9 +43,8 @@ useEffect(() => {
     <h1>{description} 
     {name==="laptop" && 
   
-    <a href="https://kb.4d.com/assetid=78277" target="_blank" rel="noopener noreferrer">View Technotes <Notepad size={20}/></a>
+    <TechLink pagename={pagename} onClick={()=>handleModal()}>View Technotes <Notepad size={20}/></TechLink>
     }
-    
     </h1>
 
     <Card className={classes.root}> 
@@ -52,9 +57,9 @@ useEffect(() => {
 
         />
      
-    
-    
     </Card>
+    {isModalOpen && <Technotes/>}
+    {isModalOpen && <Backdrop onClick={()=>handleModal()}/>}
     </div>
   );
 }

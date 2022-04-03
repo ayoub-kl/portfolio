@@ -49,24 +49,25 @@ h2{
   color : red;
 }
 
-a{
+`
+export const TechLink = styled.a`
+
     position : absolute;  
     z-index:400;
     /* bottom : ${(props) => props.pagename==="laptop" && '129px'}; */
     /* top : ${(props) => props.pagename==="laptop" && '373px'};
     left : ${(props) => props.pagename==="laptop"  && '260px'}; */
-    bottom : ${(props) => props.pagename==="laptop" && '-30px'};
+    bottom : ${(props) => props.pagename==="laptop" && '-42px'};
     left : ${(props) => props.pagename==="laptop"  && '0'};
     color : #0c93a1;
     cursor : pointer;
     border :3px solid white;
-    font-size : 14px;
+    font-size : 16px;
     text-transform : uppercase;
     letter-spacing: 2px;
 
-}
-`
 
+`
 export const AboutMeWrapper = styled.div`
 
 position: relative;

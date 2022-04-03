@@ -1,9 +1,20 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default [
+
+
+
+    {
+        label : "FullStack developer at 4D software",
+        period : "2021-present",
+        description : "Fullstack development and tests of web apps using Angular and 4D.",
+        color : 'rgb(153 76 118)',
+    
+    },
+
 {
     label : "Frontend WEB developer at 4D software",
-    period : "2020-present",
-    description : "Development and tests of frontend web apps using ReactJS and Angular.",
+    period : "2020-2021",
+    description : "Development and tests of frontend web apps using ReactJS.",
     color : 'rgb(0 108 174)',
 
 },

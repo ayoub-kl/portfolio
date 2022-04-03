@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useCallback} from 'react'
 import Carousel from 'react-material-ui-carousel'
 import {
   Wrapper,
@@ -28,6 +28,12 @@ let isMediumCheck = useMediaQuery(device.medium)
 let isLargeCheck = useMediaQuery(device.large)
 const {isBarShown} = useSkill()
 
+const testCallback = useCallback(()=> {
+  console.log(pageName)
+  return setpageName(pageName)
+
+},[pageName])
+
 useEffect(() => {
   
   console.log(isBarShown)
@@ -38,9 +44,9 @@ useEffect(() => {
     <Wrapper>
       <BigImgWrap className="IntroCls" pagename={pageName} ismedcheck={isMediumCheck} islargecheck={isLargeCheck}>
     
-        <Carousel indicators={true} animation="slide" interval="6000" navButtonsAlwaysInvisible={true}>
+        <Carousel indicators={true} animation="slide" interval="4000" navButtonsAlwaysInvisible={true}>
           {config.map((item, index) => {
-            return <Cards {...item} key={index} setpagename={setpageName}  />
+            return <Cards {...item} key={index} setpagename={setpageName} pagename={pageName} />
           })}
         </Carousel>
       </BigImgWrap>

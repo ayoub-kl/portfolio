@@ -7,7 +7,7 @@ export default [
 
 {
     label : "Web development",
-    Descriptiopn : "Building web applications and websites using JavaScript,React,HTML,CSS",
+    Descriptiopn : "Building web applications and websites using JavaScript,React,Angular,HTML,CSS",
     color : '#2c98f0',
     icon: <Web size={70}/>,
 },
@@ -21,7 +21,7 @@ export default [
 
 {
     label : "QA , support & testing",
-    Descriptiopn : "Making sure that products meet quality standards , while offering consulting services to my clients and keeping communication flow steady. ",
+    Descriptiopn : "Making sure that products meet quality standards , while offering consulting services to my clients and keeping the communication flow steady. ",
     color : '#2fa499',
     icon: <Speedtest size={70}/>,
 },
